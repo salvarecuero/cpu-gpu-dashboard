@@ -3,12 +3,12 @@
 ; Variables are defined in Variables.inc
 
 ; ==========================================
-; SHARED METER STYLES
+; SHARED METER STYLES - Dark Theme
 ; ==========================================
 
 [StyleTitle]
 FontFace=Segoe UI
-FontSize=14
+FontSize=16
 FontWeight=600
 FontColor=#ColorText#
 AntiAlias=1
@@ -16,20 +16,13 @@ DynamicVariables=1
 
 [StyleLabel]
 FontFace=Segoe UI
-FontSize=10
+FontSize=13
+FontWeight=500
 FontColor=#ColorTextMuted#
 AntiAlias=1
 DynamicVariables=1
 
 [StyleValue]
-FontFace=Segoe UI
-FontSize=20
-FontWeight=700
-FontColor=#ColorText#
-AntiAlias=1
-DynamicVariables=1
-
-[StyleValueSmall]
 FontFace=Segoe UI
 FontSize=14
 FontWeight=600
@@ -37,43 +30,59 @@ FontColor=#ColorText#
 AntiAlias=1
 DynamicVariables=1
 
-[StyleUnit]
+[StyleValueSmall]
 FontFace=Segoe UI
 FontSize=9
+FontWeight=500
+FontColor=#ColorTextMuted#
+AntiAlias=1
+DynamicVariables=1
+
+[StyleUnit]
+FontFace=Segoe UI
+FontSize=7
 FontColor=#ColorTextMuted#
 AntiAlias=1
 DynamicVariables=1
 
 [StyleButton]
 FontFace=Segoe UI
-FontSize=10
+FontSize=9
 FontWeight=500
-FontColor=#ColorText#
-SolidColor=#ColorBackgroundLight#
-Padding=12,8,12,8
+FontColor=#ColorTextMuted#
+SolidColor=0,0,0,0
+Padding=4,4,4,4
 AntiAlias=1
 DynamicVariables=1
-MouseOverAction=[!SetOption #CURRENTSECTION# SolidColor "70,70,70,255"][!UpdateMeter #CURRENTSECTION#][!Redraw]
-MouseLeaveAction=[!SetOption #CURRENTSECTION# SolidColor "#ColorBackgroundLight#"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseOverAction=[!SetOption #CURRENTSECTION# FontColor "#ColorAccent#"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseLeaveAction=[!SetOption #CURRENTSECTION# FontColor "#ColorTextMuted#"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 
 [StyleButtonPrimary]
 FontFace=Segoe UI
-FontSize=11
+FontSize=10
 FontWeight=600
-FontColor=#ColorText#
+FontColor=255,255,255,255
 SolidColor=#ColorAccent#
-Padding=15,10,15,10
+Padding=12,10,12,10
 AntiAlias=1
 DynamicVariables=1
-MouseOverAction=[!SetOption #CURRENTSECTION# SolidColor "130,200,255,255"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseOverAction=[!SetOption #CURRENTSECTION# SolidColor "#ColorAccentHover#"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 MouseLeaveAction=[!SetOption #CURRENTSECTION# SolidColor "#ColorAccent#"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 
 [StyleInputField]
 FontFace=Segoe UI
-FontSize=11
+FontSize=12
 FontColor=#ColorText#
 SolidColor=#ColorBackgroundLight#
-Padding=10,8,10,8
+Padding=12,10,12,10
+AntiAlias=1
+DynamicVariables=1
+
+[StyleInputValue]
+FontFace=Segoe UI
+FontSize=12
+FontWeight=400
+FontColor=#ColorText#
 AntiAlias=1
 DynamicVariables=1
 
@@ -90,7 +99,7 @@ FontSize=9
 FontColor=#ColorAccent#
 AntiAlias=1
 DynamicVariables=1
-MouseOverAction=[!SetOption #CURRENTSECTION# FontColor "130,200,255,255"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseOverAction=[!SetOption #CURRENTSECTION# FontColor "#ColorAccentHover#"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 MouseLeaveAction=[!SetOption #CURRENTSECTION# FontColor "#ColorAccent#"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 
 [StyleInstructions]
@@ -100,3 +109,25 @@ FontColor=#ColorTextMuted#
 AntiAlias=1
 ClipString=2
 DynamicVariables=1
+
+[StyleHelper]
+FontFace=Segoe UI
+FontSize=8
+FontColor=#ColorTextMuted#
+StringAlign=Center
+AntiAlias=1
+DynamicVariables=1
+
+[StyleLabelClickable]
+FontFace=Segoe UI
+FontSize=11
+FontWeight=500
+FontColor=255,255,255,128
+StringAlign=Center
+SolidColor=0,0,0,1
+Padding=10,5,10,5
+AntiAlias=1
+DynamicVariables=1
+MouseOverAction=[!SetOption #CURRENTSECTION# FontColor "255,255,255,200"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseLeaveAction=[!SetOption #CURRENTSECTION# FontColor "255,255,255,128"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+LeftMouseUpAction=[!WriteKeyValue Variables IsConfigured "0" "#@#Variables.inc"][!ActivateConfig "CPUGPUDashboard\Setup" "Setup.ini"][!DeactivateConfig "#CURRENTCONFIG#"]

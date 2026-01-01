@@ -31,20 +31,24 @@ TempLow=40
 TempMedium=60
 TempHigh=80
 
-; Colors (R,G,B,A format)
+; Colors (R,G,B,A format) - Dark Theme
 ColorGood=76,175,80,255
 ColorWarning=255,193,7,255
 ColorDanger=244,67,54,255
-ColorBackground=33,33,33,255
+ColorBackground=30,30,30,255
 ColorBackgroundLight=45,45,45,255
+ColorBackgroundDark=20,20,20,255
+ColorBorder=60,60,60,255
 ColorText=255,255,255,255
-ColorTextMuted=255,255,255,170
+ColorTextMuted=160,160,160,255
 ColorAccent=100,181,246,255
+ColorAccentHover=130,200,255,255
+ColorRingBg=50,50,50,255
 
 ; Dimensions
-SkinWidth=280
-SkinHeight=150
+SkinWidth=320
+SkinHeight=245
 SkinWidthSetup=320
-SkinHeightSetup=400
-Padding=15
+SkinHeightSetup=330
+Padding=16
 CornerRadius=8
