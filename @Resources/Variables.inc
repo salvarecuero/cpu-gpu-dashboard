@@ -46,8 +46,8 @@ ColorAccentHover=130,200,255,255
 ColorRingBg=50,50,50,255
 
 ; Dimensions
-SkinWidth=320
-SkinHeight=245
+SkinWidth=190
+SkinHeight=185
 SkinWidthSetup=320
 SkinHeightSetup=330
 Padding=16
